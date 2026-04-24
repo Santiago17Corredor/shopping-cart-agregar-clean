@@ -31,7 +31,18 @@ public class InMemoryCartRepository implements CartRepository {
         return cart;
     }
 
+    public boolean isEmpty() {
+        if (cart.getItems().isEmpty()) {
+            return true;
+        }
+        return false;
+    }
+
     public void save(Cart cart) {
         this.cart = cart;
+    }
+
+    public void clear() {
+        cart = new Cart();
     }
 }

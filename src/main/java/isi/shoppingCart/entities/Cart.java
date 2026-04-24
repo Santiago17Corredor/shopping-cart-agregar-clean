@@ -44,6 +44,10 @@ public class Cart {
         return 0;
     }
 
+    public boolean isEmpty() {
+        return items.isEmpty();
+    }
+
     public double getTotal() {
         double total = 0.0;
         int i;
